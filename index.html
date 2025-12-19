@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venture IT | Futuristic IT Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+    <!-- Dynamic Background Elements -->
+    <div class="bg-grid-lines"></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+    <div class="bg-orb orb-4"></div>
+    <div class="bg-connecting-lines"></div>
+    
+    <!-- Cursor follower for interactive effects -->
+    <div class="cursor-follower"></div>
+    
+    <!-- Announcement Panel -->
+    <div class="announcement" id="announcement">
+        <div class="announcement-content">
+            <span class="pulse-dot"></span>
+            <span class="announcement-text">🚀 25% Discount for First Client Taking Our Service</span>
+            <button class="announcement-close" id="closeAnnouncement">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">Venture IT</span>
+                <span class="logo-dot"></span>
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link neon-highlight">Portfolio</a></li>
+                <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="#stats" class="nav-link">Statistics</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-cta">
+                <a href="tel:+15551234567" class="cta-btn cta-call">
+                    <i class="fas fa-phone"></i>
+                    <span>Call Us</span>
+                </a>
+            </div>
+            
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-bg-grid"></div>
+            <div class="hero-bg-orb hero-orb-1"></div>
+            <div class="hero-bg-orb hero-orb-2"></div>
+            <div class="hero-bg-orb hero-orb-3"></div>
+            <div class="hero-particles" id="heroParticles"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Engineering The</span>
+                    <span class="hero-title-line">
+                        <span class="neon-text" data-text="Digital Future">Digital Future</span>
+                    </span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    We craft intelligent SaaS solutions & high-performance digital experiences for forward-thinking enterprises.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="#portfolio" class="cta-btn cta-primary">
+                        <span class="cta-text">View Portfolio</span>
+                        <span class="cta-icon">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+                    <a href="tel:+15551234567" class="cta-btn cta-call">
+                        <i class="fas fa-phone"></i>
+                        <span>Call Us</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="floating-cube" id="floatingCube">
+                    <div class="cube-face cube-front"></div>
+                    <div class="cube-face cube-back"></div>
+                    <div class="cube-face cube-right"></div>
+                    <div class="cube-face cube-left"></div>
+                    <div class="cube-face cube-top"></div>
+                    <div class="cube-face cube-bottom"></div>
+                </div>
+                <div class="hero-orb orb-large"></div>
+                <div class="hero-orb orb-medium"></div>
+                <div class="hero-orb orb-small"></div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">SCROLL</span>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-title-text">Precision Engineered</span>
+                    <span class="section-title-highlight">Services</span>
+                </h2>
+                <p class="section-subtitle">We deliver enterprise-grade solutions with AI-driven optimization and cutting-edge technology.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card" data-service="web">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-description">High-performance, responsive websites with modern frameworks and optimized UX.</p>
+                        <div class="service-hover-content">
+                            <p class="service-hover-text">React, Vue, Next.js, Gatsby, Headless CMS</p>
+                            <span class="service-hover-arrow">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="service-card-glow"></div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card" data-service="app">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="service-title">App Development</h3>
+                        <p class="service-description">Native and cross-platform mobile applications with intuitive UI/UX.</p>
+                        <div class="service-hover-content">
+                            <p class="service-hover-text">iOS, Android, React Native, Flutter, Swift</p>
+                            <span class="service-hover-arrow">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="service-card-glow"></div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card" data-service="software">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="service-title">Software Development</h3>
+                        <p class="service-description">Custom software solutions tailored to your specific business needs.</p>
+                        <div class="service-hover-content">
+                            <p class="service-hover-text">Python, Java, C#, Node.js, Microservices</p>
+                            <span class="service-hover-arrow">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="service-card-glow"></div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card" data-service="saas">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="service-title">SaaS Services</h3>
+                        <p class="service-description">Scalable cloud-based software solutions with subscription models.</p>
+                        <div class="service-hover-content">
+                            <p class="service-hover-text">AWS, Azure, Google Cloud, Kubernetes, Docker</p>
+                            <span class="service-hover-arrow">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="service-card-glow"></div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card" data-service="ecommerce">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3 class="service-title">E-Commerce Solutions</h3>
+                        <p class="service-description">High-conversion online stores with seamless payment integration.</p>
+                        <div class="service-hover-content">
+                            <p class="service-hover-text">Shopify, WooCommerce, Magento, Custom Solutions</p>
+                            <span class="service-hover-arrow">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="service-card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-title-text">Strategic</span>
+                    <span class="section-title-highlight">Pricing</span>
+                </h2>
+                <p class="section-subtitle">Transparent, scalable pricing for businesses of all sizes. No hidden fees.</p>
+            </div>
+            
+            <div class="pricing-tabs">
+                <div class="pricing-tab active" data-tab="web">Web Development</div>
+                <div class="pricing-tab" data-tab="app">App Development</div>
+                <div class="pricing-tab" data-tab="software">Software Development</div>
+            </div>
+            
+            <!-- Web Development Pricing -->
+            <div class="pricing-grid active" id="web-pricing">
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-title">Basic</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-value">4,999</span>
+                            <span class="price-period">/project</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Responsive Website</li>
+                            <li><i class="fas fa-check"></i> Up to 5 Pages</li>
+                            <li><i class="fas fa-check"></i> Basic SEO Setup</li>
+                            <li><i class="fas fa-check"></i> Contact Form</li>
+                            <li><i class="fas fa-times"></i> E-commerce Functionality</li>
+                            <li><i class="fas fa-times"></i> Custom CMS</li>
+                        </ul>
+                    </div>
+                    <button class="pricing-cta">Choose Plan</button>
+                </div>
+                
+                <div class="pricing-card recommended">
+                    <div class="recommended-badge">Most Popular</div>
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-title">Pro</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-value">9,999</span>
+                            <span class="price-period">/project</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Everything in Basic</li>
+                            <li><i class="fas fa-check"></i> Up to 15 Pages</li>
+                            <li><i class="fas fa-check"></i> Advanced SEO</li>
+                            <li><i class="fas fa-check"></i> Custom UI/UX Design</li>
+                            <li><i class="fas fa-check"></i> Basic E-commerce</li>
+                            <li><i class="fas fa-times"></i> Custom CMS</li>
+                        </ul>
+                    </div>
+                    <button class="pricing-cta">Choose Plan</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-title">Premium</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-value">19,999</span>
+                            <span class="price-period">/project</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Everything in Pro</li>
+                            <li><i class="fas fa-check"></i> Unlimited Pages</li>
+                            <li><i class="fas fa-check"></i> Full E-commerce Suite</li>
+                            <li><i class="fas fa-check"></i> Custom CMS Development</li>
+                            <li><i class="fas fa-check"></i> API Integrations</li>
+                            <li><i class="fas fa-check"></i> Ongoing Support</li>
+                        </ul>
+                    </div>
+                    <button class="pricing-cta">Choose Plan</button>
+                </div>
+            </div>
+            
+            <!-- App Development Pricing -->
+            <div class="pricing-grid" id="app-pricing">
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-title">Basic</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-value">8,999</span>
+                            <span class="price-period">/project</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Single Platform App</li>
+                            <li><i class="fas fa-check"></i> Basic UI/UX Design</li>
+                            <li><i class="fas fa-check"></i> Up to 10 Screens</li>
+                            <li><i class="fas fa-check"></i> App Store Submission</li>
+                            <li><i class="fas fa-times"></i> Backend Integration</li>
+                            <li><i class="fas fa-times"></i> Admin Dashboard</li>
+                        </ul>
+                    </div>
+                    <button class="pricing-cta">Choose Plan</button>
+                </div>
+                
+                <div class="pricing-card recommended">
+                    <div class="recommended-badge">Most Popular</div>
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-title">Pro</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-value">16,999</span>
+                            <span class="price-period">/project</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Everything in Basic</li>
+                            <li><i class="fas fa-check"></i> Cross-Platform (iOS & Android)</li>
+                            <li><i class="fas fa-check"></i> Advanced UI/UX Design</li>
+                            <li><i class="fas fa-check"></i> Backend API Integration</li>
+                            <li><i class="fas fa-check"></i> Push Notifications</li>
+                            <li><i class="fas fa-times"></i> Real-time Features</li>
+                        </ul>
+                    </div>
+                    <button class="pricing-cta">Choose Plan</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-title">Premium</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-value">29,999</span>
+                            <span class="price-period">/project</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Everything in Pro</li>
+                            <li><i class="fas fa-check"></i> Real-time Features</li>
+                            <li><i class="fas fa-check"></i> Advanced Analytics</li>
+                            <li><i class="fas fa-check"></i> Custom Backend</li>
+                            <li><i class="fas fa-check"></i> Admin Dashboard</li>
+                            <li><i class="fas fa-check"></i> Ongoing Maintenance</li>
+                        </ul>
+                    </div>
+                    <button class="pricing-cta">Choose Plan</button>
+                </div>
+            </div>
+            
+            <!-- Software Development Pricing -->
+            <div class="pricing-grid" id="software-pricing">
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-title">Basic</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-value">14,999</span>
+                            <span class="price-period">/project</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Single Module Software</li>
+                            <li><i class="fas fa-check"></i> Basic Database Design</li>
+                            <li><i class="fas fa-check"></i> Standard Reporting</li>
+                            <li><i class="fas fa-check"></i> User Management</li>
+                            <li><i class="fas fa-times"></i> Advanced Analytics</li>
+                            <li><i class="fas fa-times"></i> API Development</li>
+                        </ul>
+                    </div>
+                    <button class="pricing-cta">Choose Plan</button>
+                </div>
+                
+                <div class="pricing-card recommended">
+                    <div class="recommended-badge">Most Popular</div>
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-title">Pro</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-value">24,999</span>
+                            <span class="price-period">/project</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Everything in Basic</li>
+                            <li><i class="fas fa-check"></i> Multi-module System</li>
+                            <li><i class="fas fa-check"></i> Advanced Database Design</li>
+                            <li><i class="fas fa-check"></i> Custom API Development</li>
+                            <li><i class="fas fa-check"></i> Third-party Integrations</li>
+                            <li><i class="fas fa-times"></i> AI/ML Integration</li>
+                        </ul>
+                    </div>
+                    <button class="pricing-cta">Choose Plan</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-title">Premium</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-value">49,999</span>
+                            <span class="price-period">/project</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Everything in Pro</li>
+                            <li><i class="fas fa-check"></i> Enterprise Architecture</li>
+                            <li><i class="fas fa-check"></i> AI/ML Integration</li>
+                            <li><i class="fas fa-check"></i> Real-time Processing</li>
+                            <li><i class="fas fa-check"></i> Advanced Security</li>
+                            <li><i class="fas fa-check"></i> 24/7 Support</li>
+                        </ul>
+                    </div>
+                    <button class="pricing-cta">Choose Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="350">0</h3>
+                        <p class="stat-label">Total Projects</p>
+                    </div>
+                    <div class="stat-glow"></div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="98">0</h3>
+                        <p class="stat-label">Success Rate (%)</p>
+                    </div>
+                    <div class="stat-glow"></div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="240">0</h3>
+                        <p class="stat-label">Happy Customers</p>
+                    </div>
+                    <div class="stat-glow"></div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="15">0</h3>
+                        <p class="stat-label">Industry Awards</p>
+                    </div>
+                    <div class="stat-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-title-text">Showcase</span>
+                    <span class="section-title-highlight">Portfolio</span>
+                </h2>
+                <p class="section-subtitle">A curated selection of our transformative projects for global enterprises.</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-card" data-category="web">
+                    <div class="portfolio-card-inner">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Fintech Dashboard">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3 class="portfolio-title">Fintech Analytics Dashboard</h3>
+                                    <p class="portfolio-description">Real-time financial data visualization platform with predictive analytics.</p>
+                                    <div class="portfolio-tags">
+                                        <span class="portfolio-tag">React</span>
+                                        <span class="portfolio-tag">D3.js</span>
+                                        <span class="portfolio-tag">Node.js</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-glow"></div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-card" data-category="app">
+                    <div class="portfolio-card-inner">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Health App">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3 class="portfolio-title">Health & Wellness Mobile App</h3>
+                                    <p class="portfolio-description">AI-powered fitness tracking application with personalized workout plans.</p>
+                                    <div class="portfolio-tags">
+                                        <span class="portfolio-tag">React Native</span>
+                                        <span class="portfolio-tag">Firebase</span>
+                                        <span class="portfolio-tag">TensorFlow Lite</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-glow"></div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-card" data-category="saas">
+                    <div class="portfolio-card-inner">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="SaaS Platform">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3 class="portfolio-title">Enterprise SaaS Platform</h3>
+                                    <p class="portfolio-description">Scalable B2B solution for project management with team collaboration tools.</p>
+                                    <div class="portfolio-tags">
+                                        <span class="portfolio-tag">Vue.js</span>
+                                        <span class="portfolio-tag">AWS</span>
+                                        <span class="portfolio-tag">PostgreSQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-glow"></div>
+                </div>
+            </div>
+            
+            <div class="portfolio-cta">
+                <a href="#" class="cta-btn cta-secondary view-all-btn">
+                    <span class="btn-text">View All Projects</span>
+                    <span class="btn-icon">
+                        <i class="fas fa-external-link-alt"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map & Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="contact-title">Get In Touch</h2>
+                    <p class="contact-description">Ready to transform your digital presence? Contact us for a consultation.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>San Francisco, CA</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:hello@Venture IT-tech.com">hello@Venture IT-tech.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-map">
+                    <div class="map-container">
+                        <!-- Google Map Placeholder -->
+                        <div class="map-placeholder">
+                            <div class="map-grid"></div>
+                            <div class="map-marker">
+                                <i class="fas fa-map-pin"></i>
+                            </div>
+                            <div class="map-overlay">
+                                <h3>San Francisco HQ</h3>
+                                <p>Our innovation hub where we craft digital futures.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <a href="#" class="footer-logo">
+                        <span class="footer-logo-text">Venture IT</span>
+                        <span class="footer-logo-dot"></span>
+                    </a>
+                    <p class="footer-about-text">We engineer intelligent digital solutions for forward-thinking enterprises, blending cutting-edge technology with strategic design.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">App Development</a></li>
+                        <li><a href="#services">Software Development</a></li>
+                        <li><a href="#services">SaaS Services</a></li>
+                        <li><a href="#services">E-commerce Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:hello@Venture IT-tech.com">hello@Venture IT-tech.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2023 Venture IT Technologies. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/15551234567" class="whatsapp-btn" id="whatsappBtn">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us</span>
+    </a>
+    
+    <!-- Call Floating Button -->
+    <a href="tel:+15551234567" class="call-btn" id="callBtn">
+        <i class="fas fa-phone"></i>
+        <span class="call-tooltip">Call us now</span>
+    </a>
+    
+    <script src="script.js"></script>
+</body>
+</html>
