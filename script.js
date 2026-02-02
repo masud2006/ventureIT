@@ -93,7 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
             target.classList.contains('service-card') ||
             target.classList.contains('portfolio-card') ||
             target.classList.contains('pricing-card') ||
-            target.closest('.nav-link')) {
+            target.closest('.nav-link') ||
+            target.closest('.portfolio-link') ||
+            target.closest('.social-link') ||
+            target.closest('.footer-links a')) {
             if (cursorFollower) {
                 cursorFollower.style.width = '40px';
                 cursorFollower.style.height = '40px';
@@ -110,7 +113,10 @@ document.addEventListener('DOMContentLoaded', function() {
             target.classList.contains('service-card') ||
             target.classList.contains('portfolio-card') ||
             target.classList.contains('pricing-card') ||
-            target.closest('.nav-link')) {
+            target.closest('.nav-link') ||
+            target.closest('.portfolio-link') ||
+            target.closest('.social-link') ||
+            target.closest('.footer-links a')) {
             if (cursorFollower) {
                 cursorFollower.style.width = '20px';
                 cursorFollower.style.height = '20px';
@@ -127,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===== Interactive Elements Update =====
     function updateInteractiveElements(e) {
         // Get all interactive elements
-        const interactiveElements = document.querySelectorAll('.service-card, .portfolio-card, .pricing-card, .cta-btn');
+        const interactiveElements = document.querySelectorAll('.service-card, .portfolio-card, .pricing-card, .cta-btn, .stat-card');
         
         interactiveElements.forEach(element => {
             const rect = element.getBoundingClientRect();
@@ -157,7 +163,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Apply effects
                 if (element.classList.contains('service-card') || 
                     element.classList.contains('portfolio-card') ||
-                    element.classList.contains('pricing-card')) {
+                    element.classList.contains('pricing-card') ||
+                    element.classList.contains('stat-card')) {
                     
                     // Apply 3D tilt
                     element.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateZ(10px)`;
@@ -183,7 +190,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Reset transformations when cursor is far away
                 if (element.classList.contains('service-card') || 
                     element.classList.contains('portfolio-card') ||
-                    element.classList.contains('pricing-card')) {
+                    element.classList.contains('pricing-card') ||
+                    element.classList.contains('stat-card')) {
                     element.style.transform = '';
                     
                     const glowElement = element.querySelector('.service-card-glow') || 
@@ -250,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let announcementPulseStopped = false;
     
     function handleAnnouncementPulse() {
-        if (announcementPulseStopped) return;
+        if (announcementPulseStopped || !announcement || !pricingSection) return;
         
         const pricingRect = pricingSection.getBoundingClientRect();
         const announcementRect = announcement.getBoundingClientRect();
@@ -303,6 +311,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (countersAnimated) return;
         
         const statsSection = document.getElementById('stats');
+        if (!statsSection) return;
+        
         const statsRect = statsSection.getBoundingClientRect();
         
         // Check if stats section is in viewport
@@ -357,12 +367,14 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update navbar opacity based on scroll
         const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(10, 10, 15, 0.95)';
-            navbar.style.backdropFilter = 'blur(10px)';
-        } else {
-            navbar.style.background = 'rgba(10, 10, 15, 0.85)';
-            navbar.style.backdropFilter = 'blur(10px)';
+        if (navbar) {
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(10, 10, 15, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.background = 'rgba(10, 10, 15, 0.85)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            }
         }
         
         // Update active nav link based on scroll position
@@ -425,6 +437,62 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // ===== Portfolio Section Interactions =====
+    function setupPortfolioInteractions() {
+        // Add hover effect for portfolio cards
+        const portfolioCards = document.querySelectorAll('.portfolio-card');
+        
+        portfolioCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+        
+        // Handle click events on project cards (for analytics/tracking)
+        const portfolioLinks = document.querySelectorAll('.portfolio-link');
+        portfolioLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Optional: Add analytics or tracking here
+                console.log('Navigating to project:', this.href);
+                // You can add Google Analytics or other tracking here
+                // Example: gtag('event', 'portfolio_click', { project_url: this.href });
+            });
+        });
+    }
+    
+    // ===== View All Projects Button =====
+    const viewAllBtn = document.querySelector('.view-all-btn');
+    if (viewAllBtn) {
+        viewAllBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Show loading animation
+            const originalText = this.querySelector('.btn-text').textContent;
+            this.querySelector('.btn-text').textContent = 'Loading...';
+            this.style.pointerEvents = 'none';
+            
+            // Simulate loading delay
+            setTimeout(() => {
+                // In a real implementation, this would navigate to a portfolio page
+                // For now, we'll show an alert and reset the button
+                alert('This would navigate to a full portfolio page with all projects in a real implementation.');
+                
+                this.querySelector('.btn-text').textContent = originalText;
+                this.style.pointerEvents = 'auto';
+                
+                // Add a subtle animation
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            }, 1000);
+        });
+    }
+    
     // ===== WhatsApp Button Logic =====
     const whatsappBtn = document.getElementById('whatsappBtn');
     let whatsappPulseStopped = false;
@@ -453,16 +521,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // ===== View All Projects Button =====
-    const viewAllBtn = document.querySelector('.view-all-btn');
-    if (viewAllBtn) {
-        viewAllBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            // Show a modal or navigate to portfolio page
-            alert('In a real implementation, this would navigate to a full portfolio page with all projects.');
-        });
-    }
-    
     // ===== Smooth Scrolling =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -479,6 +537,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
+                
+                // Close mobile menu if open
+                if (navMenu && navMenu.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
             }
         });
     });
@@ -487,6 +552,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function init() {
         // Create background particles
         createParticles();
+        
+        // Setup portfolio interactions
+        setupPortfolioInteractions();
         
         // Add CSS classes for scroll animation
         const style = document.createElement('style');
@@ -515,6 +583,9 @@ document.addEventListener('DOMContentLoaded', function() {
             .portfolio-card:nth-child(1) { transition-delay: 0.1s; }
             .portfolio-card:nth-child(2) { transition-delay: 0.2s; }
             .portfolio-card:nth-child(3) { transition-delay: 0.3s; }
+            .portfolio-card:nth-child(4) { transition-delay: 0.4s; }
+            .portfolio-card:nth-child(5) { transition-delay: 0.5s; }
+            .portfolio-card:nth-child(6) { transition-delay: 0.6s; }
             
             .pricing-card:nth-child(1) { transition-delay: 0.1s; }
             .pricing-card:nth-child(2) { transition-delay: 0.2s; }
