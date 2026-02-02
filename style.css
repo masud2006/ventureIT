@@ -1133,6 +1133,17 @@ section {
 /* ===== Portfolio Section ===== */
 .portfolio {
     background-color: rgba(10, 10, 15, 0.7);
+    position: relative;
+}
+
+.portfolio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(67, 97, 238, 0.1) 0%, transparent 70%);
 }
 
 .portfolio-grid {
@@ -1144,95 +1155,118 @@ section {
 
 .portfolio-card {
     position: relative;
+    background: rgba(15, 21, 37, 0.7);
     border-radius: 12px;
     overflow: hidden;
-    height: 350px;
-    transform-style: preserve-3d;
-    perspective: 1000px;
     transition: var(--transition-smooth);
+    border: 1px solid rgba(0, 243, 255, 0.1);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-cyan);
+    box-shadow: var(--shadow-neon);
+}
+
+.portfolio-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
 }
 
 .portfolio-card-inner {
-    position: relative;
-    width: 100%;
+    padding: 1.5rem;
+}
+
+.website-preview {
+    background: rgba(10, 10, 15, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 243, 255, 0.1);
     height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-}
-
-.portfolio-card:hover .portfolio-card-inner {
-    transform: rotateY(5deg) rotateX(5deg);
-}
-
-.portfolio-image {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.portfolio-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s;
-}
-
-.portfolio-card:hover .portfolio-image img {
-    transform: scale(1.05);
-}
-
-.portfolio-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, transparent 40%, rgba(10, 10, 15, 0.9) 90%);
     display: flex;
-    align-items: flex-end;
-    padding: 2rem;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    flex-direction: column;
 }
 
-.portfolio-card:hover .portfolio-overlay {
-    opacity: 1;
+.website-preview-header {
+    background: rgba(18, 24, 38, 0.9);
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    border-bottom: 1px solid rgba(0, 243, 255, 0.1);
 }
 
-.portfolio-info {
-    transform: translateY(20px);
-    transition: transform 0.5s ease;
+.browser-dots {
+    display: flex;
+    gap: 6px;
 }
 
-.portfolio-card:hover .portfolio-info {
-    transform: translateY(0);
+.browser-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
 }
 
-.portfolio-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+.browser-dot.red {
+    background: #ff5f56;
+}
+
+.browser-dot.yellow {
+    background: #ffbd2e;
+}
+
+.browser-dot.green {
+    background: #27ca3f;
+}
+
+.website-url {
+    color: rgba(224, 224, 224, 0.7);
+    font-size: 0.85rem;
+    font-family: 'Courier New', monospace;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.website-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.website-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
     color: var(--color-light);
+    font-weight: 600;
 }
 
-.portfolio-description {
+.website-description {
     color: rgba(224, 224, 224, 0.8);
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
 
-.portfolio-tags {
+.website-tech {
     display: flex;
-    gap: 0.5rem;
     flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-.portfolio-tag {
+.website-tech span {
     background: rgba(0, 243, 255, 0.1);
     color: var(--color-cyan);
     padding: 4px 10px;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 500;
+    border: 1px solid rgba(0, 243, 255, 0.2);
 }
 
 .portfolio-glow {
@@ -1260,15 +1294,21 @@ section {
 .view-all-btn {
     display: inline-flex;
     align-items: center;
-    padding: 15px 35px;
+    padding: 12px 30px;
     font-size: 1.1rem;
     background: rgba(15, 21, 37, 0.7);
     border: 1px solid rgba(0, 243, 255, 0.3);
+    color: var(--color-light);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
 }
 
 .view-all-btn:hover {
     background: rgba(0, 243, 255, 0.1);
     transform: translateY(-5px);
+    border-color: var(--color-cyan);
+    box-shadow: var(--shadow-neon);
 }
 
 .view-all-btn .btn-icon {
