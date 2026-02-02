@@ -44,8 +44,18 @@
         grid-template-columns: repeat(2, 1fr);
     }
     
+    /* Portfolio Section - Tablet */
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .website-content {
+        padding: 1.2rem;
+    }
+    
+    .website-title {
+        font-size: 1.2rem;
     }
     
     .contact-grid {
@@ -151,6 +161,31 @@
         text-align: center;
     }
     
+    /* Portfolio Section - Medium Mobile */
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .portfolio-card-inner {
+        padding: 1rem;
+    }
+    
+    .website-preview-header {
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .website-content {
+        padding: 1rem;
+    }
+    
+    .website-title {
+        font-size: 1.1rem;
+    }
+    
+    .website-description {
+        font-size: 0.9rem;
+    }
+    
     .footer-bottom {
         flex-direction: column;
         gap: 1rem;
@@ -190,8 +225,7 @@
     
     .services-grid,
     .pricing-grid,
-    .stats-grid,
-    .portfolio-grid {
+    .stats-grid {
         grid-template-columns: 1fr;
     }
     
@@ -202,6 +236,32 @@
     
     .stat-number {
         font-size: 2.8rem;
+    }
+    
+    /* Portfolio Section - Mobile */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .portfolio-card {
+        height: auto;
+    }
+    
+    .portfolio-card-inner {
+        padding: 1.2rem;
+    }
+    
+    .website-preview {
+        min-height: 250px;
+    }
+    
+    .website-content {
+        padding: 1.2rem;
+    }
+    
+    .website-title {
+        font-size: 1.3rem;
     }
     
     .footer-grid {
@@ -258,5 +318,36 @@
     
     .price-value {
         font-size: 2.8rem;
+    }
+    
+    /* Portfolio Section - Small Mobile */
+    .website-preview-header {
+        padding: 0.5rem 0.8rem;
+    }
+    
+    .website-url {
+        font-size: 0.75rem;
+    }
+    
+    .website-content {
+        padding: 1rem;
+    }
+    
+    .website-title {
+        font-size: 1.1rem;
+    }
+    
+    .website-description {
+        font-size: 0.85rem;
+    }
+    
+    .website-tech span {
+        font-size: 0.75rem;
+        padding: 3px 8px;
+    }
+    
+    .view-all-btn {
+        padding: 10px 25px;
+        font-size: 1rem;
     }
 }
