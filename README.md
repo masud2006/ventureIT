@@ -3,8 +3,7 @@ Venture IT is a professional web, app, and software development company focused 
 
 Our mission: Turn ideas into powerful digital experiences.
 
-🔗 Live Website
-👉 Website Preview: (Add your live company website URL here, e.g., https://ventureit.tech)
+🔗 Live Website: https://venture-it.vercel.app/ 
 
 Experience our design, technology, and professionalism firsthand.
 
