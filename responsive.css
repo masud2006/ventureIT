@@ -32,14 +32,6 @@
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .pricing-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .pricing-card.recommended {
-        transform: none;
-    }
-    
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -79,6 +71,19 @@
     .call-btn {
         bottom: 30px;
         right: 20px;
+    }
+
+    /* New sections tablet */
+    .branches-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .why-choose-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .client-logo {
+        width: 150px;
+        margin: 0 1rem;
     }
 }
 
@@ -150,17 +155,6 @@
         margin-bottom: 1rem;
     }
     
-    .pricing-tabs {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .pricing-tab {
-        width: 100%;
-        max-width: 300px;
-        text-align: center;
-    }
-    
     /* Portfolio Section - Medium Mobile */
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -195,6 +189,22 @@
     .bg-orb {
         display: none;
     }
+
+    /* New sections tablet-mobile */
+    .branches-grid {
+        grid-template-columns: 1fr;
+    }
+    .why-choose-list li {
+        font-size: 1rem;
+    }
+    .why-choose-logo img {
+        max-height: 150px;
+    }
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
 }
 
 /* Mobile Phones */
@@ -224,7 +234,6 @@
     }
     
     .services-grid,
-    .pricing-grid,
     .stats-grid {
         grid-template-columns: 1fr;
     }
@@ -288,6 +297,24 @@
         bottom: 25px;
         right: 15px;
     }
+
+    /* New sections mobile */
+    .client-logo {
+        width: 120px;
+        margin: 0 0.5rem;
+        padding: 0.5rem;
+    }
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    .carousel-prev {
+        left: 10px;
+    }
+    .carousel-next {
+        right: 10px;
+    }
 }
 
 /* Small Mobile Phones */
@@ -311,14 +338,6 @@
     .cube-left { transform: rotateY(-90deg) translateZ(75px); }
     .cube-top { transform: rotateX(90deg) translateZ(75px); }
     .cube-bottom { transform: rotateX(-90deg) translateZ(75px); }
-    
-    .pricing-card {
-        padding: 2rem 1.5rem;
-    }
-    
-    .price-value {
-        font-size: 2.8rem;
-    }
     
     /* Portfolio Section - Small Mobile */
     .website-preview-header {
