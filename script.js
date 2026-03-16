@@ -92,11 +92,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (target.classList.contains('cta-btn') || 
             target.classList.contains('service-card') ||
             target.classList.contains('portfolio-card') ||
-            target.classList.contains('pricing-card') ||
             target.closest('.nav-link') ||
             target.closest('.portfolio-link') ||
             target.closest('.social-link') ||
-            target.closest('.footer-links a')) {
+            target.closest('.footer-links a') ||
+            target.closest('.branch-card')) {
             if (cursorFollower) {
                 cursorFollower.style.width = '40px';
                 cursorFollower.style.height = '40px';
@@ -112,11 +112,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (target.classList.contains('cta-btn') || 
             target.classList.contains('service-card') ||
             target.classList.contains('portfolio-card') ||
-            target.classList.contains('pricing-card') ||
             target.closest('.nav-link') ||
             target.closest('.portfolio-link') ||
             target.closest('.social-link') ||
-            target.closest('.footer-links a')) {
+            target.closest('.footer-links a') ||
+            target.closest('.branch-card')) {
             if (cursorFollower) {
                 cursorFollower.style.width = '20px';
                 cursorFollower.style.height = '20px';
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===== Interactive Elements Update =====
     function updateInteractiveElements(e) {
         // Get all interactive elements
-        const interactiveElements = document.querySelectorAll('.service-card, .portfolio-card, .pricing-card, .cta-btn, .stat-card');
+        const interactiveElements = document.querySelectorAll('.service-card, .portfolio-card, .cta-btn, .stat-card, .branch-card');
         
         interactiveElements.forEach(element => {
             const rect = element.getBoundingClientRect();
@@ -163,8 +163,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Apply effects
                 if (element.classList.contains('service-card') || 
                     element.classList.contains('portfolio-card') ||
-                    element.classList.contains('pricing-card') ||
-                    element.classList.contains('stat-card')) {
+                    element.classList.contains('stat-card') ||
+                    element.classList.contains('branch-card')) {
                     
                     // Apply 3D tilt
                     element.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateZ(10px)`;
@@ -190,8 +190,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Reset transformations when cursor is far away
                 if (element.classList.contains('service-card') || 
                     element.classList.contains('portfolio-card') ||
-                    element.classList.contains('pricing-card') ||
-                    element.classList.contains('stat-card')) {
+                    element.classList.contains('stat-card') ||
+                    element.classList.contains('branch-card')) {
                     element.style.transform = '';
                     
                     const glowElement = element.querySelector('.service-card-glow') || 
@@ -242,7 +242,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===== Announcement Logic =====
     const announcement = document.getElementById('announcement');
     const closeAnnouncement = document.getElementById('closeAnnouncement');
-    const pricingSection = document.getElementById('pricing');
     
     if (closeAnnouncement) {
         closeAnnouncement.addEventListener('click', function() {
@@ -253,55 +252,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 500);
         });
     }
-    
-    // Stop announcement pulse when user scrolls past pricing section
-    let announcementPulseStopped = false;
-    
-    function handleAnnouncementPulse() {
-        if (announcementPulseStopped || !announcement || !pricingSection) return;
-        
-        const pricingRect = pricingSection.getBoundingClientRect();
-        const announcementRect = announcement.getBoundingClientRect();
-        
-        // If pricing section is in view or announcement is scrolled out of view
-        if (pricingRect.top < window.innerHeight || announcementRect.bottom < 0) {
-            // Stop the pulse animation
-            const pulseDot = document.querySelector('.pulse-dot');
-            if (pulseDot) {
-                pulseDot.style.animation = 'none';
-                announcementPulseStopped = true;
-            }
-        }
-    }
-    
-    // ===== Pricing Tabs =====
-    const pricingTabs = document.querySelectorAll('.pricing-tab');
-    const pricingGrids = {
-        'web': document.getElementById('web-pricing'),
-        'app': document.getElementById('app-pricing'),
-        'software': document.getElementById('software-pricing')
-    };
-    
-    pricingTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            const tabId = this.getAttribute('data-tab');
-            
-            // Update active tab
-            pricingTabs.forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Show corresponding pricing grid
-            Object.keys(pricingGrids).forEach(key => {
-                if (pricingGrids[key]) {
-                    if (key === tabId) {
-                        pricingGrids[key].classList.add('active');
-                    } else {
-                        pricingGrids[key].classList.remove('active');
-                    }
-                }
-            });
-        });
-    });
     
     // ===== Animated Counters (Starting from 0) =====
     const statNumbers = document.querySelectorAll('.stat-number');
@@ -344,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                     
                     // Format number with commas
-                    if (stat.getAttribute('data-target') === '98') {
+                    if (stat.getAttribute('data-target') === '99') {
                         // For percentage, show decimal
                         stat.textContent = current.toFixed(1);
                     } else {
@@ -361,9 +311,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleScrollAnimations() {
         // Check for animated counters
         animateCounters();
-        
-        // Check for announcement pulse
-        handleAnnouncementPulse();
         
         // Update navbar opacity based on scroll
         const navbar = document.querySelector('.navbar');
@@ -407,7 +354,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ===== Animate Elements on Scroll =====
     function animateOnScroll() {
-        const animatedElements = document.querySelectorAll('.service-card, .portfolio-card, .pricing-card, .stat-card');
+        const animatedElements = document.querySelectorAll('.service-card, .portfolio-card, .stat-card, .branch-card, .why-choose-list li');
         
         animatedElements.forEach(element => {
             const elementPosition = element.getBoundingClientRect();
@@ -547,6 +494,65 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // ===== Carousel Functionality =====
+    const carouselTrack = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    const dotsContainer = document.getElementById('carouselDots');
+
+    if (carouselTrack) {
+        const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+        let currentIndex = 0;
+        const slideCount = slides.length;
+        let autoSlideInterval;
+
+        // Create dots
+        slides.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.classList.add('carousel-dot');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        });
+        const dots = document.querySelectorAll('.carousel-dot');
+
+        function updateDots() {
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        function goToSlide(index) {
+            if (index < 0) index = slideCount - 1;
+            if (index >= slideCount) index = 0;
+            currentIndex = index;
+            carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateDots();
+        }
+
+        prevBtn.addEventListener('click', () => {
+            goToSlide(currentIndex - 1);
+            resetAutoSlide();
+        });
+        nextBtn.addEventListener('click', () => {
+            goToSlide(currentIndex + 1);
+            resetAutoSlide();
+        });
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => goToSlide(currentIndex + 1), 4000);
+        }
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+        startAutoSlide();
+
+        // Pause on hover
+        const container = document.querySelector('.carousel-container');
+        container.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+        container.addEventListener('mouseleave', startAutoSlide);
+    }
     
     // ===== Initialize =====
     function init() {
@@ -559,7 +565,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add CSS classes for scroll animation
         const style = document.createElement('style');
         style.textContent = `
-            .service-card, .portfolio-card, .pricing-card, .stat-card {
+            .service-card, .portfolio-card, .stat-card, .branch-card, .why-choose-list li {
                 opacity: 0;
                 transform: translateY(30px);
                 transition: opacity 0.6s ease, transform 0.6s ease;
@@ -567,8 +573,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             .service-card.animate-in, 
             .portfolio-card.animate-in, 
-            .pricing-card.animate-in, 
-            .stat-card.animate-in {
+            .stat-card.animate-in, 
+            .branch-card.animate-in,
+            .why-choose-list li.animate-in {
                 opacity: 1;
                 transform: translateY(0);
             }
@@ -579,6 +586,9 @@ document.addEventListener('DOMContentLoaded', function() {
             .service-card:nth-child(3) { transition-delay: 0.3s; }
             .service-card:nth-child(4) { transition-delay: 0.4s; }
             .service-card:nth-child(5) { transition-delay: 0.5s; }
+            .service-card:nth-child(6) { transition-delay: 0.6s; }
+            .service-card:nth-child(7) { transition-delay: 0.7s; }
+            .service-card:nth-child(8) { transition-delay: 0.8s; }
             
             .portfolio-card:nth-child(1) { transition-delay: 0.1s; }
             .portfolio-card:nth-child(2) { transition-delay: 0.2s; }
@@ -587,14 +597,21 @@ document.addEventListener('DOMContentLoaded', function() {
             .portfolio-card:nth-child(5) { transition-delay: 0.5s; }
             .portfolio-card:nth-child(6) { transition-delay: 0.6s; }
             
-            .pricing-card:nth-child(1) { transition-delay: 0.1s; }
-            .pricing-card:nth-child(2) { transition-delay: 0.2s; }
-            .pricing-card:nth-child(3) { transition-delay: 0.3s; }
-            
             .stat-card:nth-child(1) { transition-delay: 0.1s; }
             .stat-card:nth-child(2) { transition-delay: 0.2s; }
             .stat-card:nth-child(3) { transition-delay: 0.3s; }
             .stat-card:nth-child(4) { transition-delay: 0.4s; }
+
+            .branch-card:nth-child(1) { transition-delay: 0.1s; }
+            .branch-card:nth-child(2) { transition-delay: 0.2s; }
+            .branch-card:nth-child(3) { transition-delay: 0.3s; }
+            .branch-card:nth-child(4) { transition-delay: 0.4s; }
+
+            .why-choose-list li:nth-child(1) { transition-delay: 0.1s; }
+            .why-choose-list li:nth-child(2) { transition-delay: 0.2s; }
+            .why-choose-list li:nth-child(3) { transition-delay: 0.3s; }
+            .why-choose-list li:nth-child(4) { transition-delay: 0.4s; }
+            .why-choose-list li:nth-child(5) { transition-delay: 0.5s; }
         `;
         document.head.appendChild(style);
         
