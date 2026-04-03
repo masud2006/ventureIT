@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venture IT | Futuristic IT Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+    <!-- Dynamic Background Elements -->
+    <div class="bg-grid-lines"></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+    <div class="bg-orb orb-4"></div>
+    <div class="bg-connecting-lines"></div>
+    
+    <!-- Cursor follower for interactive effects -->
+    <div class="cursor-follower"></div>
+    
+    <!-- Announcement Panel -->
+    <div class="announcement" id="announcement">
+        <div class="announcement-content">
+            <span class="pulse-dot"></span>
+            <span class="announcement-text">🚀 25% " WELCOMING DISCOUNT " for a First Client Taking Our Service</span>
+            <button class="announcement-close" id="closeAnnouncement">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <!-- Replaced text logo with image logo -->
+                <img src="VIT2.png" alt="Venture IT" style="height: 250px; width: auto;">
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#clients" class="nav-link">Our &nbsp;Clients</a></li>
+                <li class="nav-item"><a href="#why-choose" class="nav-link">Why &nbsp;Choose &nbsp;Us</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link neon-highlight">Portfolio</a></li>
+                <li class="nav-item"><a href="#success" class="nav-link">Success &nbsp;Stories</a></li>
+                <li class="nav-item"><a href="#stats" class="nav-link">Statistics</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact &nbsp;US</a></li>
+                
+                
+            </ul>
+            
+            <div class="nav-cta">
+                <a href="tel:+8801758742415" class="cta-btn cta-call">
+                    <i class="fas fa-phone"></i>
+                    <span>Call Us</span>
+                </a>
+            </div>
+            
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-bg-grid"></div>
+            <div class="hero-bg-orb hero-orb-1"></div>
+            <div class="hero-bg-orb hero-orb-2"></div>
+            <div class="hero-bg-orb hero-orb-3"></div>
+            <div class="hero-particles" id="heroParticles"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Engineering The</span>
+                    <span class="hero-title-line">
+                        <span class="neon-text" data-text="Digital Future">Digital Future</span>
+                    </span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    At <i><b>Venture IT</b></i>,  <br>We create powerful and scalable digital solutions designed for businesses in 
+                    Bangladesh, especially in Dhaka’s competitive market. From custom software to high-performance 
+                    websites, we help companies build a strong digital presence, streamline operations, and grow faster 
+                    with reliable, future-ready technology.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="#portfolio" class="cta-btn cta-primary">
+                        <span class="cta-text">View Our Works</span>
+                        <span class="cta-icon">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+                    <a href="tel:+8801758742415" class="cta-btn cta-call">
+                        <i class="fas fa-phone"></i>
+                        <span>Call Us</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="floating-cube" id="floatingCube">
+                    <div class="cube-face cube-front"></div>
+                    <div class="cube-face cube-back"></div>
+                    <div class="cube-face cube-right"></div>
+                    <div class="cube-face cube-left"></div>
+                    <div class="cube-face cube-top"></div>
+                    <div class="cube-face cube-bottom"></div>
+                </div>
+                <div class="hero-orb orb-large"></div>
+                <div class="hero-orb orb-medium"></div>
+                <div class="hero-orb orb-small"></div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">SCROLL</span>
+        </div>
+    </section>
+    
+
+    <!-- NEW SECTION: Our Valuable Clients (replaces Pricing) -->
+    <section class="clients" id="clients">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-title-text"></span>
+                    <span class="section-title-highlight">Our Valuable Clients</span>
+                </h2>
+                <p class="section-subtitle">Trusted by Leading Businesses</p>
+            </div>
+            <div class="client-marquee">
+                <div class="marquee-track">
+                    <!-- Duplicate logos for infinite scroll -->
+                    <div class="client-logo"><img src="c1.jpeg" alt="S Task Trade & Accessories"></div>
+                    <div class="client-logo"><img src="c4.png" alt="MS Academy"></div>
+                    <div class="client-logo"><img src="c5.jpeg" alt="MS Lifestyle"></div>
+                    <div class="client-logo"><img src="c2.png" alt="Time Ex Tours & Travels"></div>
+                    <div class="client-logo"><img src="c6.jpeg" alt="MS Home Decor"></div>
+                    <div class="client-logo"><img src="c7.png" alt="ConnectX BD"></div>
+                    <div class="client-logo"><img src="c3.png" alt="Authentic Touch Interior Design"></div>
+                    <div class="client-logo"><img src="c8.jpeg" alt="CycleWala"></div>
+
+                    <!-- Duplicate logos for infinite scroll -->
+                    <div class="client-logo"><img src="c1.jpeg" alt="S Task Trade & Accessories"></div>
+                    <div class="client-logo"><img src="c4.png" alt="MS Academy"></div>
+                    <div class="client-logo"><img src="c5.jpeg" alt="MS Lifestyle"></div>
+                    <div class="client-logo"><img src="c2.png" alt="Time Ex Tours & Travels"></div>
+                    <div class="client-logo"><img src="c6.jpeg" alt="MS Home Decor"></div>
+                    <div class="client-logo"><img src="c7.png" alt="ConnectX BD"></div>
+                    <div class="client-logo"><img src="c3.png" alt="Authentic Touch Interior Design"></div>
+                    <div class="client-logo"><img src="c8.jpeg" alt="CycleWala"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Why Choose Us -->
+    <section class="why-choose" id="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-title-text"></span>
+                    <span class="section-title-highlight">Why Choose Us</span>
+                </h2>
+            </div>
+            <div class="why-choose-grid">
+                <div class="why-choose-left">
+                    <ul class="why-choose-list">
+                        <li><i class="fas fa-user-tie"></i> Professional Team</li>
+                        <li><i class="fas fa-clock"></i> On-Time Delivery</li>
+                        <li><i class="fas fa-tags"></i> Affordable Pricing</li>
+                        <li><i class="fas fa-microchip"></i> Modern Technology</li>
+                        <li><i class="fas fa-headset"></i> Dedicated Client Support</li>
+                    </ul>
+                </div>
+                <div class="why-choose-right">
+                    <div class="why-choose-logo">
+                        <img src="vit3.png" alt="Venture IT Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-title-text"></span>
+                    <span class="section-title-highlight"> OUR SERVICES</span>
+                </h2>
+                <p class="section-subtitle">We deliver enterprise-grade solutions with AI-driven optimization and cutting-edge technology.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card" data-service="web">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-description">High-performance, responsive websites with modern frameworks and optimized UX.</p>
+                        <div class="service-hover-content">
+                            
+                            <a href="https://wa.me/8801892996862?text=I%20want%20to%20consult%20about%20Web%20Development" target="_blank" class="service-hover-arrow" style="display: inline-block; padding: 0.5rem 1rem; background: rgba(0,255,255,0.2); border-radius: 30px; color: #00ffff; text-decoration: none;">Consult Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="service-card-glow"></div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card" data-service="app">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="service-title">App Development</h3>
+                        <p class="service-description">Native and cross-platform mobile applications with intuitive UI/UX.</p>
+                        <div class="service-hover-content">
+                            
+                            <a href="https://wa.me/8801892996862?text=I%20want%20to%20consult%20about%20App%20Development" target="_blank" class="service-hover-arrow" style="display: inline-block; padding: 0.5rem 1rem; background: rgba(0,255,255,0.2); border-radius: 30px; color: #00ffff; text-decoration: none;">Consult Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="service-card-glow"></div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card" data-service="software">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="service-title">Custom Software Development</h3>
+                        <p class="service-description">Custom software solutions tailored to your specific business needs.</p>
+                        <div class="service-hover-content">
+                            
+                            <a href="https://wa.me/8801892996862?text=I%20want%20to%20consult%20about%20Custom%20Software%20Development" target="_blank" class="service-hover-arrow" style="display: inline-block; padding: 0.5rem 1rem; background: rgba(0,255,255,0.2); border-radius: 30px; color: #00ffff; text-decoration: none;">Consult Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="service-card-glow"></div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card" data-service="saas">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="service-title">SaaS Services</h3>
+                        <p class="service-description">Scalable cloud-based software solutions with subscription models.</p>
+                        <div class="service-hover-content">
+                            
+                            <a href="https://wa.me/8801892996862?text=I%20want%20to%20consult%20about%20SaaS%20Service" target="_blank" class="service-hover-arrow" style="display: inline-block; padding: 0.5rem 1rem; background: rgba(0,255,255,0.2); border-radius: 30px; color: #00ffff; text-decoration: none;">Consult Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="service-card-glow"></div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card" data-service="ecommerce">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3 class="service-title">E-Commerce Solutions</h3>
+                        <p class="service-description">High-conversion online stores with seamless payment integration.</p>
+                        <div class="service-hover-content">
+                            <a href="https://wa.me/8801892996862?text=I%20want%20to%20consult%20about%20E-Commerce%20Solutions" target="_blank" class="service-hover-arrow" style="display: inline-block; padding: 0.5rem 1rem; background: rgba(0,255,255,0.2); border-radius: 30px; color: #00ffff; text-decoration: none;">Consult Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="service-card-glow"></div>
+                </div>
+
+                <!-- NEW SERVICE 6: Digital Marketing -->
+                <div class="service-card" data-service="digital-marketing">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="service-title">Digital Marketing</h3>
+                        <p class="service-description">Data-driven strategies to boost your online presence and ROI.</p>
+                        <div class="service-hover-content">
+                            <a href="https://wa.me/8801892996862?text=I%20want%20to%20consult%20about%20Digital%20Marketing" target="_blank" class="service-hover-arrow" style="display: inline-block; padding: 0.5rem 1rem; background: rgba(0,255,255,0.2); border-radius: 30px; color: #00ffff; text-decoration: none;">Consult Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="service-card-glow"></div>
+                </div>
+
+                <!-- NEW SERVICE 7: Graphics Design -->
+                <div class="service-card" data-service="graphics-design">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3 class="service-title">Graphics Design</h3>
+                        <p class="service-description">Eye-catching visuals that communicate your brand's story.</p>
+                        <div class="service-hover-content">
+                            <a href="https://wa.me/8801892996862?text=I%20want%20to%20consult%20about%20Graphics%20Design" target="_blank" class="service-hover-arrow" style="display: inline-block; padding: 0.5rem 1rem; background: rgba(0,255,255,0.2); border-radius: 30px; color: #00ffff; text-decoration: none;">Consult Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="service-card-glow"></div>
+                </div>
+
+                <!-- NEW SERVICE 8: Domain & Hosting -->
+                <div class="service-card" data-service="domain-hosting">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="service-title">Domain & Hosting</h3>
+                        <p class="service-description">Reliable, secure, and fast hosting with domain registration.</p>
+                        <div class="service-hover-content">
+                            <a href="https://wa.me/8801892996862?text=I%20want%20to%20consult%20about%20Domain%20and%20Hosting" target="_blank" class="service-hover-arrow" style="display: inline-block; padding: 0.5rem 1rem; background: rgba(0,255,255,0.2); border-radius: 30px; color: #00ffff; text-decoration: none;">Consult Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="service-card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- NEW SECTION: Why Choose Us -->
+    <section class="why-choose" id="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-title-text"></span>
+                    <span class="section-title-highlight">Why Choose Us</span>
+                </h2>
+            </div>
+            <div class="why-choose-grid">
+                <div class="why-choose-left">
+                    <ul class="why-choose-list">
+                        <li><i class="fas fa-user-tie"></i> Professional Team</li>
+                        <li><i class="fas fa-clock"></i> On-Time Delivery</li>
+                        <li><i class="fas fa-tags"></i> Affordable Pricing</li>
+                        <li><i class="fas fa-microchip"></i> Modern Technology</li>
+                        <li><i class="fas fa-headset"></i> Dedicated Client Support</li>
+                    </ul>
+                </div>
+                <div class="why-choose-right">
+                    <div class="why-choose-logo">
+                        <img src="vit3.png" alt="Venture IT Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="section-title-text">Visit Some of Our</span>
+                <span class="section-title-highlight">WORKS & PROJECTS</span>
+            </h2>
+        </div>
+        
+        <div class="portfolio-grid">
+            <!-- Portfolio Item 1 - Time Ex Tours & Travels -->
+            <div class="portfolio-card" data-category="web">
+                <div class="portfolio-card-inner">
+                    <div class="portfolio-image">
+                        <img src="p1.png" alt="Time Ex Tours & Travels homepage">
+                    </div>
+                    <div class="portfolio-company">
+                        <h3 class="portfolio-title">Time Ex Tours & Travels</h3>
+                    </div>
+                    <div class="portfolio-type">
+                        <p class="portfolio-description">Travel Agency</p>
+                    </div>
+                    <div class="portfolio-action">
+                        <a href="https://timeexbd.com/" target="_blank" class="portfolio-btn">Visit Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-glow"></div>
+            </div>
+            
+            <!-- Portfolio Item 2 - Authentic Touch -->
+            <div class="portfolio-card" data-category="web">
+                <div class="portfolio-card-inner">
+                    <div class="portfolio-image">
+                        <img src="p2.png" alt="Authentic Touch interior design">
+                    </div>
+                    <div class="portfolio-company">
+                        <h3 class="portfolio-title">Authentic Touch</h3>
+                    </div>
+                    <div class="portfolio-type">
+                        <p class="portfolio-description">Interior Design</p>
+                    </div>
+                    <div class="portfolio-action">
+                        <a href="https://interior-website-demo.netlify.app/" target="_blank" class="portfolio-btn">Visit Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-glow"></div>
+            </div>
+            
+            <!-- Portfolio Item 3 - LiftStrong Gym -->
+            <div class="portfolio-card" data-category="web">
+                <div class="portfolio-card-inner">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="LiftStrong Gym">
+                    </div>
+                    <div class="portfolio-company">
+                        <h3 class="portfolio-title">LiftStrong</h3>
+                    </div>
+                    <div class="portfolio-type">
+                        <p class="portfolio-description">Gym & Fitness</p>
+                    </div>
+                    <div class="portfolio-action">
+                        <a href="https://gymdemo1-beta.vercel.app/" target="_blank" class="portfolio-btn">Visit Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-glow"></div>
+            </div>
+            
+            <!-- Portfolio Item 4 - Nexus Interior Design -->
+            <div class="portfolio-card" data-category="web">
+                <div class="portfolio-card-inner">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd0b2e9b6e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nexus Interior Design">
+                    </div>
+                    <div class="portfolio-company">
+                        <h3 class="portfolio-title">Nexus Interior Design</h3>
+                    </div>
+                    <div class="portfolio-type">
+                        <p class="portfolio-description">Interior Design</p>
+                    </div>
+                    <div class="portfolio-action">
+                        <a href="https://interiordesigncompanydemo1.vercel.app/" target="_blank" class="portfolio-btn">Visit Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-glow"></div>
+            </div>
+            
+            <!-- Portfolio Item 5 - Masud Bin Faruk -->
+            <div class="portfolio-card" data-category="web">
+                <div class="portfolio-card-inner">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Masud Bin Faruk portfolio">
+                    </div>
+                    <div class="portfolio-company">
+                        <h3 class="portfolio-title">Masud Bin Faruk</h3>
+                    </div>
+                    <div class="portfolio-type">
+                        <p class="portfolio-description">Developer Portfolio</p>
+                    </div>
+                    <div class="portfolio-action">
+                        <a href="https://masudbinfaruk.vercel.app/" target="_blank" class="portfolio-btn">Visit Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-glow"></div>
+            </div>
+            
+            <!-- Portfolio Item 6 - S-Task Trade & Accessories -->
+            <div class="portfolio-card" data-category="web">
+                <div class="portfolio-card-inner">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="S-Task Trade">
+                    </div>
+                    <div class="portfolio-company">
+                        <h3 class="portfolio-title">S-Task Trade & Accessories</h3>
+                    </div>
+                    <div class="portfolio-type">
+                        <p class="portfolio-description">Garments Manufacturer</p>
+                    </div>
+                    <div class="portfolio-action">
+                        <a href="https://staskbd.com/" target="_blank" class="portfolio-btn">Visit Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-glow"></div>
+            </div>
+        </div>
+        
+        <div class="portfolio-cta">
+            <a href="#" class="cta-btn cta-secondary view-all-btn">
+                <span class="btn-text">View All Projects</span>
+                <span class="btn-icon">
+                    <i class="fas fa-external-link-alt"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- NEW SECTION: Our Success Stories (Carousel) -->
+    <section class="success-stories" id="success">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-title-text"></span>
+                    <span class="section-title-highlight">Our Success Stories</span>
+                </h2>
+                <p class="section-subtitle">Delivery photos of completed projects</p>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide"><img src="h1.jpg" alt="Project 1"></div>
+                    <div class="carousel-slide"><img src="h2.jpg" alt="Project 2"></div>
+                    
+                </div>
+                <button class="carousel-btn carousel-prev" id="carouselPrev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn carousel-next" id="carouselNext"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Stats Section with added title "Our Journey" -->
+<section class="stats" id="stats">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="section-title-text">Join US in</span>
+                <span class="section-title-highlight">OUR JOURNEY</span>
+            </h2>
+        </div>
+    <div class="stats-grid">
+            <div class="stat-card">
+                        <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="23">0</h3>
+                        <p class="stat-label">Total Projects</p>
+                    </div>
+                    <div class="stat-glow"></div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="99">0</h3>
+                        <p class="stat-label">Success Rate (%)</p>
+                    </div>
+                    <div class="stat-glow"></div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users" aria-hidden="true"></i></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="86">0</h3>
+                        <p class="stat-label">Repeated Clients (%)</p>
+                    </div>
+                    <div class="stat-glow"></div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="2">0</h3>
+                        <p class="stat-label">Industry Awards</p>
+                    </div>
+                    <div class="stat-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <!-- Map & Contact Section (unchanged) -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="contact-title">Get In Touch</h2>
+                    <p class="contact-description">Ready to transform your digital presence? Contact us for a consultation.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Head Office: &nbsp;&nbsp;F Block, Banasree R/A, Dhaka,Bangladesh</p>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p><a href="tel:+8801758742415">+8801758-742415</a></p>
+                                <p><a href="tel:+8801892996862">+8801892-996862</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@ventureit.tech">info@ventureit.tech</a></p>
+                                <p><a href="mailto:ventureitoffice@gmail.com">ventureitoffice@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-map">
+                    <div class="map-container">
+                        <!-- Google Map Placeholder -->
+                        <div class="map-placeholder">
+                            <div class="map-grid"></div>
+                            <div class="map-marker">
+                                <i class="fas fa-map-pin"></i>
+                            </div>
+                            <div class="map-overlay">
+                                <p>Our innovation hub where we craft digital futures.</p>
+                                <a href="https://maps.app.goo.gl/eHE4e76KoJvJrury6" target="_blank">
+                                <h3>F Block, Banasree R/A, Dhaka, Bangladesh</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Our Branches -->
+    <section class="branches" id="branches">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-title-text"></span>
+                    <span class="section-title-highlight">Our Branches</span>
+                </h2>
+            </div>
+            <div class="branches-grid">
+                <!-- Dhaka Branch -->
+                <div class="branch-card">
+                    <div class="branch-icon"><i class="fas fa-university"></i></div>
+                    <h3 class="branch-name">Banasree Branch</h3>
+                    <div class="branch-city">Dhaka</div>
+                    <div class="branch-phone"><i class="fas fa-phone"></i> +880 1758-742415</div>
+                    <div class="branch-address"><i class="fas fa-map-marker-alt"></i> F Block, Banasree R/A</div>
+                </div>
+                <!-- Uttara Branch -->
+                <div class="branch-card">
+                    <div class="branch-icon"><i class="fas fa-university"></i></div>
+                    <h3 class="branch-name">Uttara Branch</h3>
+                    <div class="branch-city">Dhaka</div>
+                    <div class="branch-phone"><i class="fas fa-phone"></i> +880 1892-996862</div>
+                    <div class="branch-address"><i class="fas fa-map-marker-alt"></i> Sector 04, Uttara</div>
+                </div>
+                <!-- Mirpur Branch -->
+                <div class="branch-card">
+                    <div class="branch-icon"><i class="fas fa-university"></i></div>
+                    <h3 class="branch-name">Mirpur Branch</h3>
+                    <div class="branch-city">Dhaka</div>
+                    <div class="branch-phone"><i class="fas fa-phone"></i> +880 1317-165076</div>
+                    <div class="branch-address"><i class="fas fa-map-marker-alt"></i>Mazar Road, Mirpur 01</div>
+                </div>
+                <!-- Sirajganj Branch -->
+                <div class="branch-card">
+                    <div class="branch-icon"><i class="fas fa-university"></i></div>
+                    <h3 class="branch-name">Sirajganj Branch</h3>
+                    <div class="branch-city">Sirajganj</div>
+                    <div class="branch-phone"><i class="fas fa-phone"></i> +880 1764-506685</div>
+                    <div class="branch-address"><i class="fas fa-map-marker-alt"></i> Sadar Hospital Road, Sirajganj</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <a href="#" class="footer-logo">
+                        <span class="footer-logo-text">Venture IT</span>
+                        <span class="footer-logo-dot"></span>
+                    </a>
+                    <p class="footer-about-text">We engineer intelligent digital solutions for forward-thinking enterprises, blending cutting-edge technology with strategic design.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#stats">Statistics</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">App Development</a></li>
+                        <li><a href="#services">Software Development</a></li>
+                        <li><a href="#services">SaaS Services</a></li>
+                        <li><a href="#services">E-commerce Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i>Banasree R/A, Dhaka, Bangladesh</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+8801758742415">+8801758-742415</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+8801892996862">+8801892-996862</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@ventureit.tech">info@ventureit.tech</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:ventureitoffice@gmail.com">ventureitoffice@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Venture IT. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/1892996862" class="whatsapp-btn" id="whatsappBtn">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us</span>
+    </a>
+    
+    <!-- Call Floating Button -->
+    <a href="tel:+8801758742415" class="call-btn" id="callBtn">
+        <i class="fas fa-phone"></i>
+        <span class="call-tooltip">Call us now</span>
+    </a>
+
+    <!-- Carousel Script -->
+    <script>
+        // Simple carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.getElementById('carouselTrack');
+            const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+            const prevBtn = document.getElementById('carouselPrev');
+            const nextBtn = document.getElementById('carouselNext');
+            const dotsContainer = document.getElementById('carouselDots');
+            let currentIndex = 0;
+            const slideCount = slides.length;
+
+            // Create dots
+            slides.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.classList.add('carousel-dot');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            });
+            const dots = document.querySelectorAll('.carousel-dot');
+            updateDots();
+
+            function updateDots() {
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentIndex);
+                });
+            }
+
+            function goToSlide(index) {
+                if (index < 0) index = slideCount - 1;
+                if (index >= slideCount) index = 0;
+                currentIndex = index;
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                updateDots();
+            }
+
+            prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+            nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+            // Auto-slide every 5 seconds
+            setInterval(() => goToSlide(currentIndex + 1), 5000);
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
